@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Biogas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Fijo -->
+    <header class="header-fijo">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="./img/logo.jpg" alt="Logo Institución" class="logo">
+            </div>
+            <h1 class="titulo-dinamico">
+                <span>P</span><span>r</span><span>o</span><span>y</span><span>e</span><span>c</span><span>t</span><span>o</span>
+                <span class="espacio"></span>
+                <span>B</span><span>i</span><span>o</span><span>g</span><span>a</span><span>s</span>
+            </h1>
+            <nav class="menu">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+                <ul class="menu-lista" id="menuLista">
+                    <li><a href="#inicio" class="menu-item">Inicio</a></li>
+                    <li><a href="#parte1" class="menu-item">Nuestra Región</a></li>
+                    <li><a href="#parte2" class="menu-item">El Biogás</a></li>
+                    <li><a href="#parte3" class="menu-item">El Proyecto</a></li>
+                    <li><a href="#parte4" class="menu-item">Galería</a></li>
+                    <li><a href="#footer" class="menu-item">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="seccion-inicio">
+        <div class="hero-content">
+            <h2>Energía Limpia del Futuro</h2>
+            <p>Transformando residuos orgánicos en energía renovable</p>
+        </div>
+    </section>
+
+    <!-- Parte 1: Qué es el Biogas -->
+    <section id="parte1" class="seccion-contenido">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Nuestra Región y el porqué del Biogás</h2>
+            <div class="contenido-grid">
+                <div class="texto-contenido">
+                    <p>En la localidad donde vivimos, contamos con una red de gas GLP (Gas Licuado de Petróleo) la cual
+                        solamente llega a abastecer pequeños sectores de Villa Pehuenia, mientras que la mayoría de
+                        viviendas cercanas no cuentan con una fuente eficiente. Por eso, comercios, hogares e inclusive
+                        nuestra escuela, dependen del reparto de camiones de garrafas, tubos de gas o abastecimiento de
+                        zeppelin de gas.</p>
+
+                    <p>En base a esta problemática es que surge este pequeño proyecto, que tiene como objetivo llegar a
+                        producir una fuente de gas eficiente, ecológica y funcional, que permita abastecer cocinas y sea
+                        una ayuda a la fuente de gas actual. Es por ello que surgió la idea de construir un biodigestor
+                        para producir biogás, resultado de la descomposición de materia orgánica, que es una forma
+                        ecológica y eficiente de generar gas.</p>
+
+                    <p>Además, la producción de biogás representa una solución innovadora para el manejo de residuos orgánicos,
+                        permitiendo transformar un problema ambiental en una oportunidad energética. Además, el proceso
+                        genera un subproducto valioso llamado digestato, que puede utilizarse como fertilizante orgánico
+                        de alta calidad.</p>
+                </div>
+                <div class="galeria-fotos">
+                    <img src="./img/Gasescuela3.png" alt="escuela">
+                    <img src="./img/Plantagas.png" alt="Proceso de producción">
+                    <img src="./img/Reparto de garrafas.png" alt="garrafa">
+                    <img src="./img/electrica.jpg" alt="estufaElectrica">
+                    <img src="./img/salamandra.webp" alt="salamandra">
+                    <img src="./img/Leña.jpg" alt="leña">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parte 2: Beneficios -->
+    <section id="parte2" class="seccion-contenido alt">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">¿Cómo se produce el Biogás?</h2>
+            <div class="contenido-grid">
+                <div class="texto-contenido">
+                    <p>El biogás se produce por un proceso natural en el que los microorganismos se encargan de descomponer materia orgánica. Esta materia, debe ser colocada y sellada en un recipiente anaeróbico. Luego de esto se esperará que los microorganismos actúen y se produzca dicho gas. Cuando esto suceda, el gas tenderá a reunirse en la parte superior del recipiente y así se recolectará para su uso.</p>
+                    <p>En este recipiente hermético, se encontrarán bacterias determinadas que trabajarán en conjunto en 4 fases: </p>
+                    <p><b>La primera fase</b> es la <a href="https://www.quimica.es/enciclopedia/Hidr%C3%B3lisis.html" target="_blank" style="text-decoration: none"><b style="color:darkred">hidrólisis</b></a>, donde las moléculas grandes se dividirán en moléculas más sencillas.</p>
+                    <p><b>La segunda fase</b> es la <a href="https://www.aguamarket.com/diccionario/terminos.asp?Id=2771" target="_blank" style="text-decoration: none"><b style="color:darkred">acidogénesis</b></a>, en la cual las moléculas simples se transformarán en ácidos grasos, volátiles, alcoholes, dióxido de carbono, etc.</p>
+                    <p><b>La tercera fase</b> es la <a href="quimica.es/enciclopedia/Acetogénesis.html" target="_blank" style="text-decoration: none"><b style="color:darkred">acetogénesis</b></a>, en la que se convertirán en ácido acético, CO2 y H2.</p>
+                    <p><b>La última fase</b> es la <a href="https://www.quimica.es/enciclopedia/Metanog%C3%A9nesis.html" target="_blank" style="text-decoration: none"><b style="color:darkred">metanogénesis</b></a>, donde bacterias llamadas metanógenas producirán biogás.</p>
+                </div>
+                <div class="galeria-fotos">
+                    <img src="img/microorganismos.jpg" alt="Energía limpia">
+                    <img src="img/estiercol.webp" alt="estiercol">
+                    <img src="img/residuos-orgánicos-compressor.jpg" alt="residuos">
+                    <img src="img/materiaOrg.jpg" alt="residuos">
+                    <img src="img/unnamed.png" alt="Sostenibilidad">
+                    <img src="img/biodigestorIA.png" alt="Medio ambiente">
+                </div>
+            </div>
+
+            <div class="texto-contenido">   
+                <iframe src="https://www.youtube.com/embed/G4MxHBnCYA0?si=qfxLXxLouszReRlB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="texto-contenido">
+                <p>Las bacterias metanógenas son un conjunto de:
+                    <ul class="listas">
+                        <li>Metano (CH4): 50 – 70%</li>
+                        <li>Dióxido de carbono (CO2): 30 – 50%</li>
+                        <li>Otros gases en menor cantidad (como H2S y vapor de agua).</li>
+                    </ul>
+                </p>
+                <p>El gas generado puede ser utilizado como:
+                    <ul class="listas">
+                        <li>Combustibles para electricidad o calor.</li>
+                        <li>Combustible para vehículos (purificado).</li>
+                        <li>Los restantes (sean líquidos o sólidos) se llaman "digestatos", y se pueden usar como fertilizantes orgánicos.</li>
+                    </ul>                        
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parte 3: Implementación y Galería -->
+    <section id="parte3" class="seccion-contenido">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Desarrollo del Proyecto</h2>
+            <div class="contenido-grid">
+                <div class="texto-contenido">
+
+                    <h3>Desarrollo del biodigestor:</h3>
+                    <p>El proyecto se centró en la concepción y desarrollo de un biodigestor, abordando de manera prioritaria la optimización del diseño a partir de los errores y limitaciones detectados en experiencias previas.</p>
+
+                    <p>El enfoque de perfeccionamiento radicó en dos pilares fundamentales:
+                        <ol class="listas">
+                            <li><b>Optimización del Contenedor y Sellado:</b> Se selecciono un contenedor que permitiera un sellado optimo y el montaje de una válvula y sensores en su cara superior. Esto tiene como objetivo garantizar la estanqueidad del sistema, minimizando las fugas de gas y optimizando la eficiencia del proceso anaeróbico.</li>
+                            <li><b>Monitoreo Integral del Proceso: </b>Se ha incorporado un sistema de sensores para el registro continuo de variables. Este sistema no solo documentará los cambios inherentes al proceso químico interno, sino que también capturará los parámetros ambientales externos. Se tiene en cuenta la medición de la temperatura ambiental, reconociendo su papel como catalizador en la cinética de la digestión anaeróbica.</li>
+                        </ol>
+                    </p>
+
+                    <p style="color:rgb(156, 113, 113)"> <i><b>Este diseño busca lograr una operación más eficiente, segura y, fundamentalmente, la obtención de datos experimentales precisos que permitan una comprensión profunda de la dinámica del proceso de producción de biogás.</b></i></p>
+
+                </div>
+                <div class="galeria-fotos">
+                    <img src="img/Primer proyecto.png" alt="BiodigestorAntiguo">
+                    <img src="img/ModeloBio.jpg" alt="Modelo">
+                    <img src="img/armado4.png" alt="Instalación">
+                    <img src="img/Armado circuito.png" alt="sensores">
+                    <img src="img/codeando.jpg" alt="programando">
+                    <img src="img/img02.jpg" alt="sensores en acción">
+                </div>
+            </div>
+
+            <!-- Tabla/Grilla con imágenes y descripciones -->
+            <div class="tabla-container">
+
+                <h3>Características Técnicas del Proyecto</h3>
+
+                <div class="texto-contenido">
+                    <p>Nuestro proyecto utiliza una arquitectura de hardware y software diseñada para la adquisición y gestión de datos de forma eficiente y didáctica.</p>
+                    
+                    <p><b>Plataforma de Hardware</b></p>
+                    <p>El núcleo de control del sistema es la placa de desarrollo <a href="https://www.arduino.cc/" target="_blank" style="text-decoration: none;"><b>Arduino Uno R3,</b></a> que actúa como nuestro microcontrolador principal. Esta elección se debe a la amplia documentación que existe y su facilidad de integración en proyectos educativos.</p>
+                    <div style="text-align: center;"><img src="img/arduinoUno.webp" alt="placa desarrollo"></div>
+                    
+                    <p>Para establecer las conexiones físicas entre la placa Arduino y los componentes periféricos, como los sensores, se emplearon principalmente cables macho-hembra de tipo dupont. Con el fin de lograr una organización más clara y una gestión satisfactoria del cableado, se integró una placa Shield de expansión con borneras. Esta placa auxiliar nos proporcionó una matriz de conexiones adicional, superando las limitaciones de pines de la placa Arduino y facilitando las conexiones.</p>
+                    <div style="text-align: center;"><img src="img/shieldDupont.jpg" alt="shield - dupont"></div>
+
+                    <p><b>Desarrollo y Lenguaje de Programación</b></p>
+                    <p>La creación del software o código encargado de la gestión de los sensores y el registro de datos se realizó a través de un enfoque de programación por bloques. Utilizamos la plataforma <a href="https://www.steamakersblocks.com/web/" target="_blank" style="text-decoration: none;"><b>SteaMakersBlocks</b></a> en conjunto con el ABconnector V6. Esta metodología simplificó el proceso de desarrollo, permitiéndonos crear un programa de control sencillo y dinámico al abstraer la complejidad de la sintaxis del lenguaje de programación nativo de arduino.</p>
+                    
+                    <div style="text-align: center;">
+                        <img src="img/codigoBloque.jpg" alt="codigo">
+                    </div>
+                    
+                    <p><b>Visualización y Almacenamiento de Datos</b></p>
+                    <p>El sistema está configurado para manejar los datos de las mediciones de los sensores de dos maneras concurrentes:</p>
+                    <ol class="listas">
+                        <li><b>Visualización en Tiempo Real:</b> Los resultados de las mediciones censadas se presentan instantáneamente en una pantalla LCD. Esto permite el monitoreo inmediato de las condiciones operativas del sistema.</li>
+                        <br>
+                        <li><b>Registro y Análisis:</b> Adicionalmente, todos los registros de datos son guardados en una memoria microSD. Esta funcionalidad es crucial, ya que los datos almacenados serán utilizados posteriormente para la creación de una base de datos. Esta base de datos es esencial para la realización de análisis estadísticos y la evaluación del rendimiento del sistema a lo largo del tiempo.</li>
+                    </ol>
+                </div>
+
+                <h3>Sensores y Módulos utilizados</h3>
+                <br>
+                <div class="grilla-tabla">
+                    <div class="fila-tabla">
+                        <div class="celda-imagen">
+                            <img src="img/dth11.jpg" alt="Característica 1">
+                        </div>
+                        <div class="celda-descripcion">
+                            <h4>Sensor Temperatura y Humedad Ambiente</h4>
+                            <ul>
+                                <li>Nombre: DHT11</li>
+                                <li>Voltaje de operación: 3,3V – 5V.</li>
+                                <li>Rango de medición: 0°C a 50°C.</li>
+                                <li>Precisión de medición: ±2°C.</li>
+                                <li>Resolución: 1°C.</li>
+                                <li>Tiempo de censado: 1 por segundo.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fila-tabla">
+                        <div class="celda-imagen">
+                            <img src="img/ds18b20-waterproof.jpg" alt="Característica 2">
+                        </div>
+                        <div class="celda-descripcion">
+                            <h4>Sensor Temperatura Interior</h4>
+                            <ul>
+                                <li>Nombre: DS18b20 (sumergible).</li>
+                                <li>Voltaje de operación: 3,0V – 5,5V.</li>
+                                <li>Rango de medición: -55°C a +125°C.</li>
+                                <li>Precisión de medición: ±0,5°C (entre -10°C y +85°C).</li>
+                                <li>Resolución: 9 a 12 bits.</li>
+                                <li>Tiempo de censado: ~750ms.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fila-tabla">
+                        <div class="celda-imagen">
+                            <img src="img/sensorhumedadcapacitivo.jpg" alt="Característica 3">
+                        </div>
+                        <div class="celda-descripcion">
+                            <h4>Sensor Humedad Interna</h4>
+                            <ul>
+                                <li>Nombre: Sensor capacitivo de suelo.</li>
+                                <li>Voltaje de operación: 3,3V – 5V.</li>
+                                <li>Rango de medición: 0% a 100%.</li>
+                                <li>Precisión de medición: Depende del suelo.</li>
+                                <li>Resolución: Analógica (0 a 1023).</li>
+                                <li>Tiempo de censado: Tiempo real.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fila-tabla">
+                        <div class="celda-imagen">
+                            <img src="img/RTC.webp" alt="Característica 4">
+                        </div>
+                        <div class="celda-descripcion">
+                            <h4>Módulo Reloj</h4>
+                            <ul>
+                                <li>Nombre: RTC DS1302</li>
+                                <li>Rango de medición: Fecha y hora.</li>
+                                <li>Precisión de medición: ±2ppm (piezas por millón, ±1min/año).</li>
+                                <li>Resolución: 1 segundo.</li>
+                                <li>Tiempo de censado: Tiempo real.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fila-tabla">
+                        <div class="celda-imagen">
+                            <img src="img/MIcroSDModulo.jpeg" alt="Característica 5">
+                        </div>
+                        <div class="celda-descripcion">
+                            <h4>Módulo Tarjeta MicroSD</h4>
+                            <ul>
+                                <li>Nombre: Micro SD Card R/W</li>
+                                <li>Voltaje de operación: 3,3V (requiere adaptador de nivel lógico si se usa con 5V).</li>
+                                <li>Rango de medición: No aplica (almacenamiento).</li>
+                                <li>Precisión de medición: No aplica (almacenamiento).</li>
+                                <li>Resolución: No aplica (almacenamiento).</li>
+                                <li>Tiempo de censado: Depende tipo.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fila-tabla">
+                        <div class="celda-imagen">
+                            <img src="img/sensorgas.webp" alt="Característica 6">
+                        </div>
+                        <div class="celda-descripcion">
+                            <h4>Sensor Gas Combustible</h4>
+                            <ul>
+                                <li>Nombre: MQ-2.</li>
+                                <li>Voltaje de operación: m5V.</li>
+                                <li>Rango de medición: 300 – 10000ppm.</li>
+                                <li>Precisión de medición: ±10% aprox.</li>
+                                <li>Resolución: Analógica (0 a 1023).</li>
+                                <li>Tiempo de censado: 20 segundos.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fila-tabla">
+                        <div class="celda-imagen">
+                            <img src="img/sensorPresion.jpg" alt="Característica 7">
+                        </div>
+                        <div class="celda-descripcion">
+                            <h4>Sensor Presión Gas</h4>
+                            <ul>
+                                <li>Nombre: BMP280.</li>
+                                <li>Voltaje de operación: 1,8V – 3,6V.</li>
+                                <li>Rango de medición: 300 a 1100 hPa</li>
+                                <li>Precisión de medición: ±1 hPa.</li>
+                                <li>Resolución: 0,18 Pa.</li>
+                                <li>Tiempo de censado: ~1ms a 7,5m</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fila-tabla">
+                        <div class="celda-imagen">
+                            <img src="img/display.png" alt="Característica 8">
+                        </div>
+                        <div class="celda-descripcion">
+                            <h4>Display I2C LCD</h4>
+                            <ul>
+                                <li>Modelo: LCD1602 I2C</li>
+                                <li>Resolución: 16×4 pixeles</li>
+                                <li>Voltaje de alimentación: 3.3V / 5V DC</li>
+                                <li>Controlador I2C: PCF8574</li>
+                                <li>Contraste: Ajustable por potenciómetro en la interfaz I2C</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carrusel de Fotos -->
+            <div id="parte4" class="carrusel-container">
+                <h3>Galería del Proyecto</h3>
+                <div class="carrusel">
+                    <button class="carrusel-btn prev" id="prevBtn">‹</button>
+                    <div class="carrusel-slides" id="carruselSlides">
+                        <img src="img/Armado1.png" alt="Proyecto 1" class="slide active">
+                        <img src="img/Armado2.png" alt="Proyecto 2" class="slide">
+                        <img src="img/Armado3.png" alt="Proyecto 3" class="slide">
+                        <img src="img/armado4.png" alt="Proyecto 4" class="slide">
+                        <img src="img/lasustancia2.jpeg" alt="Proyecto 4" class="slide">
+                        <img src="img/materiaOrga.jpeg" alt="materiaorganica" class="slide">
+                        <img src="img/materiaOrg.jpg" alt="materiaorganica" class="slide">
+                        <img src="img/biodigestor1.jpg" alt="biodigestor" class="slide">
+                        <img src="img/biodigestor2.jpg" alt="biodigestor" class="slide">
+                        <img src="img/coding.jpg" alt="biodigestor" class="slide">
+                        <img src="img/imgA.jpeg" alt="Proyecto 6" class="slide">
+                        <img src="img/img01.jpeg" alt="Proyecto 6" class="slide">
+                    </div>
+                    <button class="carrusel-btn next" id="nextBtn">›</button>
+                </div>
+                <div class="carrusel-indicators" id="indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-seccion">
+                <h3>Contacto</h3>
+                <p><strong>Email:</strong> <a href="mailto:cpem090@neuquen.edu.ar">📧 cpem090@neuquen.edu.ar</a></p>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/_cpem90_institucional/" target="_blank">📷 @_cpem90_institucional</a></p>
+            </div>
+
+            <div class="footer-seccion">
+                <h3>CPEM N°90</h3>
+                <p>🌲Ruta 13 Km 13</p>
+                <p>🌲Villa Pehuenia</p>
+                <p>🌲Neuquén</p>
+            </div>
+
+            <div class="footer-seccion">
+                <h3>Equipo del Proyecto</h3>
+                <ul class="integrantes-lista">
+                    <li>📘 Antonella Aburto</li>
+                    <li>📘 Francesca Simonetti</li>
+                    <li>📘 Juan Emilio Voguelius</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Proyecto Biogas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu toggle para móviles
+        const menuToggle = document.getElementById('menuToggle');
+        const menuLista = document.getElementById('menuLista');
+        
+        menuToggle.addEventListener('click', () => {
+            menuLista.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un item
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', () => {
+                menuLista.classList.remove('active');
+            });
+        });
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !menuLista.contains(e.target)) {
+                menuLista.classList.remove('active');
+            }
+        });
+
+        // Carrusel
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const indicatorsContainer = document.getElementById('indicators');
+
+        // Crear indicadores
+        for (let i = 0; i < totalSlides; i++) {
+            const indicator = document.createElement('span');
+            indicator.classList.add('indicator');
+            if (i === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToSlide(i));
+            indicatorsContainer.appendChild(indicator);
+        }
+
+        const indicators = document.querySelectorAll('.indicator');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(ind => ind.classList.remove('active'));
+            
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+        }
+
+        function goToSlide(n) {
+            showSlide(n);
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+
+        // Auto-play del carrusel
+        setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
