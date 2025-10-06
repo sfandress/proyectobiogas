@@ -465,6 +465,60 @@
                 }
             });
         });
+// ============================================
+// CONTROL DEL HEADER EN ORIENTACIÓN LANDSCAPE
+// ============================================
+
+// Seleccionar el header
+const header = document.querySelector('.header-fijo');
+
+// Crear botón toggle para landscape
+const toggleBtn = document.createElement('button');
+toggleBtn.className = 'header-toggle-btn';
+toggleBtn.innerHTML = '☰';
+toggleBtn.setAttribute('aria-label', 'Mostrar/ocultar menú');
+document.body.appendChild(toggleBtn);
+
+// Función para manejar el toggle del header
+toggleBtn.addEventListener('click', () => {
+    header.classList.toggle('visible');
+    
+    // Cambiar icono del botón
+    if (header.classList.contains('visible')) {
+        toggleBtn.innerHTML = '✕';
+    } else {
+        toggleBtn.innerHTML = '☰';
+    }
+});
+
+// Ocultar header automáticamente al hacer scroll en landscape
+let lastScrollTop = 0;
+window.addEventListener('scroll', () => {
+    // Solo aplicar en landscape
+    if (window.matchMedia('(orientation: landscape) and (max-height: 600px)').matches) {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Si hace scroll hacia abajo, ocultar header
+        if (currentScroll > lastScrollTop && currentScroll > 50) {
+            header.classList.remove('visible');
+            toggleBtn.innerHTML = '☰';
+        }
+        
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    }
+});
+
+// Ocultar header al hacer clic en un enlace del menú en landscape
+document.querySelectorAll('.menu-item').forEach(item => {
+    item.addEventListener('click', () => {
+        if (window.matchMedia('(orientation: landscape) and (max-height: 600px)').matches) {
+            header.classList.remove('visible');
+            toggleBtn.innerHTML = '☰';
+            menuLista.classList.remove('active');
+        }
+    });
+});
+        
     </script>
 </body>
 
