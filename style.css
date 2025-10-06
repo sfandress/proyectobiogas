@@ -492,7 +492,7 @@ body {
 }
 
 /* Footer */
-/*.footer {
+.footer {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     color: #fff;
     padding: 2rem 1rem 1rem;
@@ -545,10 +545,35 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #bdc3c7;
     font-size: clamp(0.85rem, 2vw, 0.95rem);
-}*/
+}
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 15px;
+    background: #25D366;
+    color: #fff !important;
+    border-radius: 25px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.whatsapp-link::before {
+    content: "📱";
+    font-size: 1.2rem;
+}
+
+.whatsapp-link:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
 
 /* Footer */
-.footer {
+/*.footer {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     color: #fff;
     padding: 3rem 2rem 1rem;
@@ -624,7 +649,7 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #bdc3c7;
 }
-
+*/
 /* Responsive Design */
 
 /* Tablets y desktop */
