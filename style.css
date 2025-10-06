@@ -492,7 +492,7 @@ body {
 }
 
 /* Footer */
-.footer {
+/*.footer {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     color: #fff;
     padding: 2rem 1rem 1rem;
@@ -545,6 +545,84 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #bdc3c7;
     font-size: clamp(0.85rem, 2vw, 0.95rem);
+}*/
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #fff;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-seccion h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-seccion p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-seccion a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-seccion a:hover {
+    color: #2ecc71;
+    text-decoration: underline;
+}
+
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 15px;
+    background: #25D366;
+    color: #fff !important;
+    border-radius: 25px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.whatsapp-link::before {
+    content: "📱";
+    font-size: 1.2rem;
+}
+
+.whatsapp-link:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.integrantes-lista {
+    list-style: none;
+}
+
+.integrantes-lista li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #bdc3c7;
 }
 
 /* Responsive Design */
