@@ -6,9 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Biogas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/ModeloBio.jpg" type="image/x-icon">
 </head>
 
 <body>
+    <!-- Canvas para fuegos artificiales -->
+    <canvas id="fireworks"></canvas>
+    
+    <!-- Popup Premio -->
+    <div id="overlay-premio">
+        <div id="popup-premio">
+            <div class="trophy">🏆</div>
+            <h1>¡Primer Premio!</h1>
+            <p class="premio-titulo">EducaTic 2025</p>
+            <p class="premio-ubicacion">Neuquén, Argentina</p>
+            <button id="closeBtn">¡Celebrar! 🎉</button>
+        </div>
+    </div>
+
     <!-- Header Fijo -->
     <header class="header-fijo">
         <div class="header-container">
@@ -341,7 +356,7 @@
                         <img src="img/manguera.jpg" alt="biodigestor" class="slide">
                         <img src="img/materiaOrga.jpeg" alt="materiaorganica" class="slide">
                         <img src="img/materiaOrg.jpg" alt="materiaorganica" class="slide">
-                        <img src="img/MediciónSensor.jpg" alt="biodigestor" class="slide">
+                        <img src="img/Medición Sensor.jpg" alt="biodigestor" class="slide">
                         <img src="img/SelladoTapa.jpg" alt="biodigestor" class="slide">
                         <img src="img/biodigestor1.jpg" alt="biodigestor" class="slide">
                         <img src="img/biodigestor2.jpg" alt="biodigestor" class="slide">
@@ -390,8 +405,110 @@
     </footer>
 
     <script>
+        // ============================================
+        // FUEGOS ARTIFICIALES Y POPUP PREMIO
+        // ============================================
+        const canvas = document.getElementById('fireworks');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ffa500', '#ff1493'];
+
+        class Particle {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                this.color = color;
+                this.velocity = {
+                    x: (Math.random() - 0.5) * 8,
+                    y: (Math.random() - 0.5) * 8
+                };
+                this.alpha = 1;
+                this.decay = Math.random() * 0.0052 + 0.002;
+                this.size = Math.random() * 3 + 2;
+            }
+
+            update() {
+                this.velocity.y += 0.1;
+                this.x += this.velocity.x;
+                this.y += this.velocity.y;
+                this.alpha -= this.decay;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        function createFirework(x, y) {
+            const particleCount = 160;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle(x, y, color));
+            }
+        }
+
+        let fireworksActive = true;
+        let fireworkInterval;
+        
+        function animate() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach((particle, index) => {
+                if (particle.alpha <= 0) {
+                    particles.splice(index, 1);
+                } else {
+                    particle.update();
+                    particle.draw();
+                }
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        // Iniciar fuegos artificiales
+        fireworkInterval = setInterval(() => {
+            if (fireworksActive) {
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height * 0.7;
+                createFirework(x, y);
+            }
+        }, 400);
+
+        animate();
+
+        // Cerrar popup premio
+        document.getElementById('closeBtn').addEventListener('click', () => {
+            const overlay = document.getElementById('overlay-premio');
+            overlay.style.animation = 'fadeOut 0.5s ease-out';
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                fireworksActive = false;
+                canvas.style.display = 'none';
+            }, 500);
+        });
+
+        // Ajustar canvas al redimensionar
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // ============================================
+        // ============================================
+        
         // Menu toggle para móviles
-                const menuToggle = document.getElementById('menuToggle');
+        const menuToggle = document.getElementById('menuToggle');
         const menuLista = document.getElementById('menuLista');
         
         menuToggle.addEventListener('click', () => {
@@ -465,59 +582,60 @@
                 }
             });
         });
-// ============================================
-// CONTROL DEL HEADER EN ORIENTACIÓN LANDSCAPE
-// ============================================
 
-// Seleccionar el header
-const header = document.querySelector('.header-fijo');
+        // ============================================
+        // CONTROL DEL HEADER EN ORIENTACIÓN LANDSCAPE
+        // ============================================
 
-// Crear botón toggle para landscape
-const toggleBtn = document.createElement('button');
-toggleBtn.className = 'header-toggle-btn';
-toggleBtn.innerHTML = '☰';
-toggleBtn.setAttribute('aria-label', 'Mostrar/ocultar menú');
-document.body.appendChild(toggleBtn);
+        // Seleccionar el header
+        const header = document.querySelector('.header-fijo');
 
-// Función para manejar el toggle del header
-toggleBtn.addEventListener('click', () => {
-    header.classList.toggle('visible');
-    
-    // Cambiar icono del botón
-    if (header.classList.contains('visible')) {
-        toggleBtn.innerHTML = '✕';
-    } else {
+        // Crear botón toggle para landscape
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'header-toggle-btn';
         toggleBtn.innerHTML = '☰';
-    }
-});
+        toggleBtn.setAttribute('aria-label', 'Mostrar/ocultar menú');
+        document.body.appendChild(toggleBtn);
 
-// Ocultar header automáticamente al hacer scroll en landscape
-let lastScrollTop = 0;
-window.addEventListener('scroll', () => {
-    // Solo aplicar en landscape
-    if (window.matchMedia('(orientation: landscape) and (max-height: 600px)').matches) {
-        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Si hace scroll hacia abajo, ocultar header
-        if (currentScroll > lastScrollTop && currentScroll > 50) {
-            header.classList.remove('visible');
-            toggleBtn.innerHTML = '☰';
-        }
-        
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    }
-});
+        // Función para manejar el toggle del header
+        toggleBtn.addEventListener('click', () => {
+            header.classList.toggle('visible');
+            
+            // Cambiar icono del botón
+            if (header.classList.contains('visible')) {
+                toggleBtn.innerHTML = '✕';
+            } else {
+                toggleBtn.innerHTML = '☰';
+            }
+        });
 
-// Ocultar header al hacer clic en un enlace del menú en landscape
-document.querySelectorAll('.menu-item').forEach(item => {
-    item.addEventListener('click', () => {
-        if (window.matchMedia('(orientation: landscape) and (max-height: 600px)').matches) {
-            header.classList.remove('visible');
-            toggleBtn.innerHTML = '☰';
-            menuLista.classList.remove('active');
-        }
-    });
-});
+        // Ocultar header automáticamente al hacer scroll en landscape
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            // Solo aplicar en landscape
+            if (window.matchMedia('(orientation: landscape) and (max-height: 600px)').matches) {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Si hace scroll hacia abajo, ocultar header
+                if (currentScroll > lastScrollTop && currentScroll > 50) {
+                    header.classList.remove('visible');
+                    toggleBtn.innerHTML = '☰';
+                }
+                
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            }
+        });
+
+        // Ocultar header al hacer clic en un enlace del menú en landscape
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.matchMedia('(orientation: landscape) and (max-height: 600px)').matches) {
+                    header.classList.remove('visible');
+                    toggleBtn.innerHTML = '☰';
+                    menuLista.classList.remove('active');
+                }
+            });
+        });
         
     </script>
 </body>
